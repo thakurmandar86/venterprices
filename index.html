@@ -8,95 +8,147 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-    <!-- Navbar -->
-    <header>
-        <nav>
-            <div class="nav-container">
-                <div class="logo">
-                    <h1>Your Company</h1>
-                </div>
-                <div class="hamburger" id="hamburger">
-                    &#9776;
-                </div>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#founders">Founders</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#ratings">Ratings</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Company Details Section -->
-    <section id="company" class="section section-gradient">
-        <h1>Welcome to Our website</h1>
-        <p>Our company specializes in the manufacturing and distribution of high-quality industrial websites...</p>
-    </section>
-
-    <section id="founders" class="section section-gradient">
-        <h2>Founders</h2>
-        <div class="founders-container">
-            <div class="founder">
-                <img src="Images/1.jpg" alt="Founder 1" class="founder-img">
-                <h3>Founder Name 1</h3>
-                <p>Founder 1's short bio goes here, highlighting their experience and background.</p>
-            </div>
-            <div class="founder">
-                <img src="Images/2.png" alt="Founder 2" class="founder-img">
-                <h3>Founder Name 2</h3>
-                <p>Founder 2's short bio goes here, detailing their role in the company and achievements.</p>
-            </div>
-            <!-- You can add more founders as needed -->
+<body> 
+    <!-- Fixed Company Info Section -->
+<header class="fixed-header">
+    <div class="company-info">
+        <div class="company-logo">
+            <img src="Images/logo.jpg" alt="Company Logo" />
         </div>
-    </section>
-
-    <!-- Products Section -->
-    <section id="products" class="section section-gradient">
-        <h2>Products We Offer</h2>
-        <div class="product-container">
-            <div class="product">
-                <img src="Images/m1.png" alt="Product 1" class="product-img">
-                <h3>Product Name 1</h3>
-                <p>Description of Product 1, including its features and benefits.</p>
-                <div class="buttons">
-                    <a href="product1-details.html">View Details</a>
-                    <button>Download Brochure</button>
-                    <button>Send Enquiry</button>
-                </div>
-            </div>
-            <div class="product">
-                <img src="Images/m2.png" alt="Product 2" class="product-img">
-                <h3>Product Name 2</h3>
-                <p>Description of Product 2, including its features and benefits.</p>
-                <div class="buttons">
-                    <a href="product2-details.html">View Details</a>
-                    <button>Download Brochure</button>
-                    <button>Send Enquiry</button>
-                </div>
-            </div>
-            <!-- You can add more products as needed -->
+        <span class="divider1"></span>
+        <div class="company-details">
+            <h1 class="company-name">Your Company Name</h1>
+            <p class="company-address">Vitthalwadi police station ulhasnagar 421004. </p>
         </div>
-    </section>
+        <div class="company-meta">
+            <div class="meta-item">
+                <span class="gst-number">
+                    <img src="Images/logo.jpg" alt="Tick Icon" class="tick-icon" /> GST Number: 27AANPV5252E1ZD
+                </span>
+                <span class="divider"></span>
+                <span class="tick-verified">
+                    <img src="Images/logo.jpg" alt="Tick Icon" class="tick-icon" /> Trust Verified
+                </span>
+            </div>
+        </div>
+        <div class="action-buttons">
+            <button class="call-us-button">
+                <i class="call-icon">📞</i> Call Us
+            </button>
+            <button class="email-button">
+                <i class="email-icon">✉️</i> Send Email
+            </button>
+        </div>
+    </div>
+</header>
 
-    <!-- Ratings Section -->
-    <section id="ratings" class="section">
-        <h2>Customer Ratings</h2>
-        <p>Check out our customer ratings and reviews...</p>
-        <!-- You can use a plugin or static ratings -->
-    </section>
+<!-- Navbar -->
+<nav class="fixed-navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <h1>Your Company</h1>
+        </div>
+        <div class="hamburger" id="hamburger">
+            &#9776;
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#founders">Founders</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#ratings">Ratings</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </div>
+</nav>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <h2>Contact Us</h2>
-        <p>Email: example@company.com</p>
-        <p>Phone: +1234567890</p>
-        <p>Address: 123 Machine Street, Industry City</p>
-    </section>
+    <main class="main-content">
+        <!-- Company Details Section -->
+        <section id="company" class="section section-gradient">
+            <h1>Welcome to Our website</h1>
+            <p>Our company specializes in the manufacturing and distribution of high-quality industrial websites...</p>
+        </section>
 
+        <section id="founders" class="section section-gradient">
+            <h2>Founders</h2>
+            <div class="founders-container">
+                <div class="founder">
+                    <img src="Images/1.jpg" alt="Founder 1" class="founder-img">
+                    <h3>Founder Name 1</h3>
+                    <p>Founder 1's short bio goes here, highlighting their experience and background.</p>
+                </div>
+                <div class="founder">
+                    <img src="Images/2.png" alt="Founder 2" class="founder-img">
+                    <h3>Founder Name 2</h3>
+                    <p>Founder 2's short bio goes here, detailing their role in the company and achievements.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="section section-gradient">
+            <h2>Products We Offer</h2>
+            <div class="slider-container">
+                <button class="prev-btn">❮</button>
+                <div class="product-slider">
+                    <div class="product">
+                        <img src="Images/1.jpg" alt="Product 1" class="product-img">
+                        <h3>Product Name 1</h3>
+                        <p>Description of Product 1.</p>
+                        <div class="buttons">
+                            <a href="product1-details.html">View Details</a>
+                            <button>Download Brochure</button>
+                            <button>Send Enquiry</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="Images/2.png" alt="Product 2" class="product-img">
+                        <h3>Product Name 2</h3>
+                        <p>Description of Product 2.</p>
+                        <div class="buttons">
+                            <a href="product2-details.html">View Details</a>
+                            <button>Download Brochure</button>
+                            <button>Send Enquiry</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="Images/1.jpg" alt="Product 3" class="product-img">
+                        <h3>Product Name 3</h3>
+                        <p>Description of Product 3.</p>
+                        <div class="buttons">
+                            <a href="product3-details.html">View Details</a>
+                            <button>Download Brochure</button>
+                            <button>Send Enquiry</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="Images/2.png" alt="Product 4" class="product-img">
+                        <h3>Product Name 4</h3>
+                        <p>Description of Product 4.</p>
+                        <div class="buttons">
+                            <a href="product4-details.html">View Details</a>
+                            <button>Download Brochure</button>
+                            <button>Send Enquiry</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="next-btn">❯</button>
+            </div>
+        </section>
+        
+        <section id="ratings" class="section">
+            <h2>Customer Ratings</h2>
+            <p>Check out our customer ratings and reviews...</p>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>Email: example@company.com</p>
+            <p>Phone: +1234567890</p>
+            <p>Address: 123 Machine Street, Industry City</p>
+        </section>
+    </main>
+    
     <script src="script.js"></script>
 </body>
+
 </html>

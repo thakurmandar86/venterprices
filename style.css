@@ -12,9 +12,233 @@ body {
     background-color: #f0f4f8; /* Calming light blue-gray background */
     color: #333;
     line-height: 1.6;
-    margin: 0;
+    margin-top: 0;
     overflow-x: hidden;
 }
+
+/* Fixed header section */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    background-color: #f0f4f8;
+    padding: 10px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 999; /* Keep it on top of other elements */
+}
+
+/* Navbar Section */
+
+.fixed-navbar {
+    position: fixed;
+    top: 80px; /* Adjust this value if you want the navbar below the header */
+    left: 0;
+    height: 60px;
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+    z-index: 998;
+}
+
+.main-content {
+    margin-top: 70px; /* Adjust this value to create space below the navbar */
+}
+
+/* Company Info container */
+.company-info {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Company logo */
+.company-logo img {
+    margin-top: 7px;
+    width: 65px;
+    height: 65px;
+}
+
+/* Company name and address section */
+.company-details {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* Company name */
+.company-name {
+    margin-left: 0%;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Company address */
+.company-address {
+    font-size: 14px;
+    color: #777;
+}
+
+/* GST number and verified info */
+.company-meta {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 37px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+}
+
+.gst-number {
+    font-size: 14px;
+    color: green;
+    display: flex;
+    align-items: center;
+}
+
+.tick-verified {
+    font-size: 14px;
+    color: green;
+    display: flex;
+    align-items: center;
+}
+
+.tick-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+/* Divider line between sections */
+
+.divider1 {
+    border-left: 1px solid #ccc;
+    height: 0px;
+    margin: 0 10px;
+}
+
+.divider {
+    border-left: 1px solid #ccc;
+    height: 25px;
+    margin: 0 10px;
+}
+
+/* Action buttons: Call Us and Send Email */
+.action-buttons {
+    display: flex;
+    align-items: center;
+    margin-left: 800px;
+    
+}
+
+.call-us-button, .email-button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 50px;
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.call-us-button:hover, .email-button:hover {
+    background-color: #0056b3;
+}
+
+/* Icons inside buttons */
+.call-icon, .email-icon {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+/* Responsive behavior of Fixed Header */
+@media (max-width: 768px) {
+    .action-buttons{
+        display: none;
+    }
+    .fixed-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .company-info {
+        height: 40px;
+        width: 100%;
+    }
+
+    .company-logo img {
+        margin-top: 7px;
+        margin-left: 0;
+        width: 40px;
+        height: 40px;
+    }
+    .company-details {
+        margin-left: 0;
+        width: 130px;
+    }
+
+    .company-name {
+        align-items: flex-start;
+        font-size: 10px;
+    }
+
+    .company-address {
+        font-size: 8px;
+    }
+
+    .company-meta {
+        margin-top: 0%;
+        margin-left: 10px;
+        align-items: flex-start;
+        font-size: 8px;
+    }
+    
+    .gst-number {
+        width: 100px;
+        font-size: 8px;
+        color: green;
+        display: flex;
+        align-items: center;
+    }
+
+    .divider1 {
+        border-left: 1px solid #ccc;
+        height: 25px;
+        margin: 0 5px;
+    }
+
+    .divider {
+        border-left: 1px solid #ccc;
+        height: 25px;
+        margin: 0 10px;
+    }
+
+    .tick-verified {
+        font-size: 9px;
+        color: green;
+        display: flex;
+        align-items: center;
+    }
+    
+    .tick-icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+    }
+}
+
 
 /* Full Page Sections */
 .section {
@@ -30,21 +254,14 @@ body {
 }
 
 /* Navbar */
-header {
-    position: fixed;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
-    padding: 10px 0;
-    z-index: 1000;
-}
 
-nav {
+.navbar {
     width: 100%;
     background-color: #333;
     padding: 10px 20px;
     position: fixed;
     top: 0;
-    z-index: 100;
+    z-index: 200;
 }
 
 .nav-container {
@@ -112,6 +329,84 @@ nav {
 }
 
 /* ------------------------- */
+
+/* Product Slider Container */
+.slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+/* Product Slider - Flexbox for Horizontal Scrolling */
+.product-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    width: 100%;
+}
+
+.product {
+    min-width: 30%; /* Each product takes 30% of the container */
+    max-width: 30%; /* Set the width of the product */
+    flex: 0 0 30%; /* Flex-basis of 30% ensures that 3 products fit */
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Size Fix */
+.product-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Navigation Arrows */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Hide Scrollbar on Webkit Browsers */
+.product-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .product {
+        min-width: 80%;
+        max-width: 80%;
+        flex: 0 0 80%;
+    }
+}
+
+
 nav ul {
     list-style: none;
     display: flex;
@@ -157,7 +452,7 @@ nav ul li a:hover {
 
 /* Typography for Section Headings and Paragraphs */
 .section h1, .section h2 {
-    margin-top: 10px;
+    margin-top: 5px;
     font-size: 3.5rem;
     color: #2e2e2e; /* Dark gray for text contrast */
     text-transform: uppercase;
@@ -180,9 +475,9 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -284,6 +579,7 @@ html {
 
 /* Add a background gradient to sections */
 .section-gradient {
+    margin-top: 200px;
     background: linear-gradient(135deg, #f9f9f9, #e1f5fe); /* Subtle gradient background */
     padding: 50px;
     border-radius: 10px;
